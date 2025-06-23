@@ -1,0 +1,52 @@
+{
+  "ordensServico": [
+    {
+      "id": 1,
+      "cliente": "João da Silva",
+      "veiculo": "Fiat Uno - ABC-1234",
+      "descricao": "Troca de óleo e filtros.",
+      "status": "Agendado",
+      "tipoServico": null
+    },
+    {
+      "id": 2,
+      "cliente": "Maria Oliveira",
+      "veiculo": "Chevrolet Onix - DEF-5678",
+      "descricao": "Reparo na suspensão dianteira.",
+      "status": "Agendado",
+      "tipoServico": "Seguradora"
+    },
+    {
+      "id": 3,
+      "cliente": "Carlos Pereira",
+      "veiculo": "VW Gol - GHI-9012",
+      "descricao": "Verificar barulho no motor.",
+      "status": "Em Progresso",
+      "tipoServico": null
+    },
+    {
+      "id": 4,
+      "cliente": "Ana Costa",
+      "veiculo": "Ford Ka - JKL-3456",
+      "descricao": "Problema no ar condicionado.",
+      "status": "Em Progresso",
+      "tipoServico": "Retorno"
+    },
+    {
+      "id": 5,
+      "cliente": "Pedro Martins",
+      "veiculo": "Hyundai HB20 - MNO-7890",
+      "descricao": "Aguardando peça do fornecedor.",
+      "status": "Em Progresso",
+      "tipoServico": "Bloqueado"
+    },
+    {
+      "id": 6,
+      "cliente": "Sandra Dias",
+      "veiculo": "Toyota Corolla - PQR-1234",
+      "descricao": "Revisão completa dos 50.000 km.",
+      "status": "Entregue",
+      "tipoServico": null
+    }
+  ]
+}
