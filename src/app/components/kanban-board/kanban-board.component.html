@@ -1,0 +1,73 @@
+<div class="kanban-container" cdkDropListGroup>
+  <!-- Coluna Agendado -->
+  <div class="kanban-column">
+    <h2 class="column-title agendado-header">Agendado</h2>
+    <div
+      cdkDropList
+      id="agendado"
+      [cdkDropListData]="colunas['Agendado']"
+      class="kanban-list"
+      (cdkDropListDropped)="onDrop($event)">
+      <div class="os-card" *ngFor="let os of colunas['Agendado']" cdkDrag>
+        <div class="os-card-header">
+          <strong>{{ os.cliente }}</strong>
+          <span *ngIf="os.tipoServico" class="os-tag" [ngClass]="getTipoServicoClass(os.tipoServico)">
+            {{ os.tipoServico }}
+          </span>
+        </div>
+        <div class="os-card-body">
+          <p>{{ os.veiculo }}</p>
+          <p class="os-description">{{ os.descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coluna Em Progresso -->
+  <div class="kanban-column">
+    <h2 class="column-title em-progresso-header">Em Progresso</h2>
+    <div
+      cdkDropList
+      id="emProgresso"
+      [cdkDropListData]="colunas['Em Progresso']"
+      class="kanban-list"
+      (cdkDropListDropped)="onDrop($event)">
+      <div class="os-card" *ngFor="let os of colunas['Em Progresso']" cdkDrag>
+        <div class="os-card-header">
+          <strong>{{ os.cliente }}</strong>
+          <span *ngIf="os.tipoServico" class="os-tag" [ngClass]="getTipoServicoClass(os.tipoServico)">
+            {{ os.tipoServico }}
+          </span>
+        </div>
+        <div class="os-card-body">
+          <p>{{ os.veiculo }}</p>
+          <p class="os-description">{{ os.descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coluna Entregue -->
+  <div class="kanban-column">
+    <h2 class="column-title entregue-header">Entregue</h2>
+    <div
+      cdkDropList
+      id="entregue"
+      [cdkDropListData]="colunas['Entregue']"
+      class="kanban-list"
+      (cdkDropListDropped)="onDrop($event)">
+      <div class="os-card" *ngFor="let os of colunas['Entregue']" cdkDrag>
+        <div class="os-card-header">
+          <strong>{{ os.cliente }}</strong>
+          <span *ngIf="os.tipoServico" class="os-tag" [ngClass]="getTipoServicoClass(os.tipoServico)">
+            {{ os.tipoServico }}
+          </span>
+        </div>
+        <div class="os-card-body">
+          <p>{{ os.veiculo }}</p>
+          <p class="os-description">{{ os.descricao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

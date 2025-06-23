@@ -17,6 +17,7 @@ export class OrdemServicoService {
   }
 
   updateOrdemServicoStatus(id: number, novoStatus: StatusOS): Observable<OrdemServico> {
-    return this.http.patch<OrdemServico>(`<span class="math-inline">\{this\.apiUrl\}/</span>{id}`, { status: novoStatus });
-  }
+  return this.http.patch<OrdemServico>(`${this.apiUrl}/${id}`, { status: novoStatus });
+}
+
 }

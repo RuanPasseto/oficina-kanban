@@ -1,0 +1,110 @@
+.kanban-container {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background-color: #f4f5f7;
+  min-height: calc(100vh - 40px);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebecf0;
+  border-radius: 8px;
+}
+
+.column-title {
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.agendado-header { background-color: #4a90e2; }
+.em-progresso-header { background-color: #f5a623; }
+.entregue-header { background-color: #7ed321; }
+
+.kanban-list {
+  flex-grow: 1;
+  padding: 8px;
+  min-height: 200px;
+  transition: background-color 0.2s ease;
+}
+
+.cdk-drop-list-dragging {
+  background-color: #dfe1e6;
+}
+
+.os-card {
+  background-color: #ffffff;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  border-left: 5px solid transparent;
+  transition: box-shadow 0.2s ease, border-left-color 0.3s ease;
+}
+
+.os-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cdk-drag-placeholder { 
+  opacity: 0.4;
+  background: #e0e0e0;
+  border: 2px dashed #ccc;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.os-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.os-card-body p {
+  margin: 4px 0;
+  color: #5e6c84;
+}
+.os-description {
+  font-style: italic;
+  color: #7a869a;
+}
+
+.os-tag {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tag-seguradora { background-color: #007bff; }
+.tag-retorno { background-color: #dc3545; }
+.tag-bloqueado { background-color: #ffc107; color: #333; }
+
+@media (max-width: 768px) {
+  .kanban-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+  .kanban-column {
+    min-width: unset;
+    width: 100%;
+  }
+}
